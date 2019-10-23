@@ -1,4 +1,4 @@
-const tresholdInput = document.querySelector('#treshold > input');
+const thresholdInput = document.querySelector('#treshold > input');
 let bonus = document.getElementById("bonus");
 let funnyImage = document.getElementById('image');
 
@@ -9,8 +9,8 @@ function bonusCalculator(money) {
     money -= 10000;
 
     if (money >= 15000) {
-        bonus_sum += (15_000 * 0.05);
-        money -= 15_000;
+        bonus_sum += (15000 * 0.05);
+        money -= 15000;
     } else {
         bonus_sum += (money * 0.05);
         money = 0;
@@ -19,8 +19,8 @@ function bonusCalculator(money) {
     let factor = 0.1;
     while (money && factor < 0.3) {
         if (money >= 10000) {
-            bonus_sum += (10_000 * factor);
-            money -= 10_000;
+            bonus_sum += (10000 * factor);
+            money -= 10000;
         } else {
             bonus_sum += (money * factor);
             money = 0;
@@ -44,7 +44,13 @@ function setImage(bonusAmount) {
     }
 }
 
-tresholdInput.addEventListener('input', function () {
+thresholdInput.addEventListener('input', function () {
+    let justTest = bonusCalculator(tresholdInput.value);
+    bonus.innerHTML = justTest;
+    setImage(justTest);
+});
+
+thresholdInput.addEventListener('keydown', function () {
     let justTest = bonusCalculator(tresholdInput.value);
     bonus.innerHTML = justTest;
     setImage(justTest);
