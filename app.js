@@ -45,13 +45,13 @@ function setImage(bonusAmount) {
 }
 
 thresholdInput.addEventListener('input', function () {
-    let justTest = bonusCalculator(tresholdInput.value);
+    let justTest = bonusCalculator(thresholdInput.value);
     bonus.innerHTML = justTest;
     setImage(justTest);
 });
 
-thresholdInput.addEventListener('keydown', function () {
-    let justTest = bonusCalculator(tresholdInput.value);
+thresholdInput.addEventListener('keyup', function () {
+    let justTest = bonusCalculator(thresholdInput.value);
     bonus.innerHTML = justTest;
     setImage(justTest);
 });
