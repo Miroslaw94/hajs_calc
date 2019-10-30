@@ -38,9 +38,9 @@ function setImage(bonusAmount) {
     } else if (bonusAmount > 0 && bonusAmount < 1000) {
         funnyImage.src = 'images/its_something.jpg'
     } else if (bonusAmount >= 1000 && bonusAmount < 8000) {
-        funnyImage.src = 'images/jp2.gif'
+        funnyImage.src = 'images/maybe.gif'
     } else if (bonusAmount >= 8000) {
-        funnyImage.src = 'images/kim_money.gif'
+        funnyImage.src = 'images/rich_chapelle.gif'
     }
 }
 
